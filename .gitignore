@@ -15,3 +15,5 @@
 #Maven
 target/*
 !target/gl-airline-1.0.jar
+some/*
+!some/gl-airline-1.0.jar
