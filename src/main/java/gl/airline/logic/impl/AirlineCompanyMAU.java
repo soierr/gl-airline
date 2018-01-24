@@ -5,18 +5,21 @@ package gl.airline.logic.impl;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
-import javax.management.RuntimeErrorException;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.JsonGenerationException;
+import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectReader;
 
 import gl.airline.model.Aircraft;
+import gl.airline.model.AircraftBusiness;
+import gl.airline.model.AircraftEconomy;
+import gl.airline.model.AircraftPremium;
 import gl.airline.model.AirlineCompany;
 
 /**
@@ -24,6 +27,12 @@ import gl.airline.model.AirlineCompany;
  *
  */
 public class AirlineCompanyMAU extends AirlineCompany{
+	
+	final int CLASS_AIRPLANE_ECONOMY = 1;
+	
+	final int CLASS_AIRPLANE_BUSINESS = 2;
+	
+	final int CLASS_AIRPLANE_PREMIUM = 3;
 	
 	@JsonProperty
 	private static AirlineCompanyMAU airlineCompanyMAU = null;
@@ -63,6 +72,14 @@ public class AirlineCompanyMAU extends AirlineCompany{
 			}
 		}else{
 			
+			
+			try{
+				storageFile.createNewFile();
+			}catch(IOException e){
+				
+				throw new RuntimeException("Problem with file creation");
+			}
+			
 			airlineCompanyMAU = new AirlineCompanyMAU();
 		}
 		
@@ -73,10 +90,7 @@ public class AirlineCompanyMAU extends AirlineCompany{
 		this.managerMAU = new ManagerMAU();
 		
 	};
-	
-	/* (non-Javadoc)
-	 * @see gl.airline.model.AirlineCompany#getName()
-	 */
+
 	@JsonIgnore
 	@Override
 	public String getName() {
@@ -93,29 +107,16 @@ public class AirlineCompanyMAU extends AirlineCompany{
 	public AirlineCompany.Manager getManager(){
 		
 		return managerMAU;
-	}
-	
-	
-/*	@Override
-	public void init() throws IOException, JsonProcessingException, UnsupportedOperationException{
-		
-		if(om != null || or != null){
-			
-			throw new UnsupportedOperationException("The object already has already been initialized");
-		}
-		
-		om = new ObjectMapper();
-		
-		storageFile = new File(STORAGE_FILENAME);
-		
-	}*/
-	
-	/* (non-Javadoc)
-	 * @see gl.airline.model.AirlineCompany#shutdown()
-	 */
+	}	
+
 	@Override
 	public void shutdown() {
 		
+	}
+	
+	private void storeData() throws JsonMappingException, JsonGenerationException, IOException{
+		
+		om.writeValue(storageFile, airlineCompanyMAU);
 	}
 	
 	
@@ -171,28 +172,86 @@ public class AirlineCompanyMAU extends AirlineCompany{
 			
 			for(Aircraft aircraft : aircraftSortedSet){
 				
-				capTotal = capTotal + aircraft.getCapacityCarrying();
+				capTotal = capTotal + aircraft.getCapacityTotal();
 				
 			}
 			
 			return capTotal;
 		}
 		
-		/* (non-Javadoc)
-		 * @see gl.airline.model.AirlineCompany.Manager#addAircraft(gl.airline.model.Aircraft)
-		 */
 		@Override
-		public void addAircraft(Aircraft aircraft) {
-			// TODO Auto-generated method stub
+		public void addAircraft(int... params) {
 			
+			Aircraft aircraft = null;
+			
+    		switch(Integer.valueOf(params[4])){
+    		
+				case CLASS_AIRPLANE_ECONOMY: {
+					
+					aircraft = new AircraftEconomy(getAircraftsSorted().size() + 1, 
+							Integer.valueOf(params[0]), 
+							Integer.valueOf(params[1]), 
+							Integer.valueOf(params[2]), 
+							Integer.valueOf(params[3]), 
+							Aircraft.TYPE.ECONOMY);
+					
+					break;
+					
+				}case CLASS_AIRPLANE_BUSINESS: {
+					
+					aircraft = new AircraftBusiness(getAircraftsSorted().size() + 1, 
+							Integer.valueOf(params[0]), 
+							Integer.valueOf(params[1]), 
+							Integer.valueOf(params[2]), 
+							Integer.valueOf(params[3]), 
+							Aircraft.TYPE.BUSINESS);
+					
+					break;
+					
+				}case CLASS_AIRPLANE_PREMIUM: {
+					
+					aircraft = new AircraftPremium(getAircraftsSorted().size() + 1, 
+							Integer.valueOf(params[0]), 
+							Integer.valueOf(params[1]), 
+							Integer.valueOf(params[2]), 
+							Integer.valueOf(params[3]), 
+							Aircraft.TYPE.PREMIUM);
+					
+					break;
+				}
+    		}
+    		
+    		getAircraftsSorted().add(aircraft);
+    		
+    		
+    		try{
+    			storeData();
+    		}catch(IOException e){
+    			
+    			e.printStackTrace();
+    		}
+    		
 		}
 		
-		/* (non-Javadoc)
-		 * @see gl.airline.model.AirlineCompany.Manager#removeAircraft(java.lang.String)
-		 */
 		@Override
-		public void removeAircraft(String code) {
-			// TODO Auto-generated method stub
+		public void removeAircraft(int code) {
+			
+			Iterator<Aircraft> it = getAircraftsSorted().iterator();
+			
+			while(it.hasNext()){
+				
+				if(it.next().getCode() == code){
+					
+					it.remove();
+				}
+			}
+			
+			try{
+    			storeData();
+    		}catch(IOException e){
+    			
+    			e.printStackTrace();
+    		}
 			
 		}
 	}

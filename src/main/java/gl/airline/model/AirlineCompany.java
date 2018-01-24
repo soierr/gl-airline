@@ -28,9 +28,9 @@ public abstract class AirlineCompany{
 		
 		public SortedSet<Aircraft> getAircraftsSorted();
 		
-		public void addAircraft(Aircraft aircraft);
+		public void addAircraft(int... parameters);
 		
-		public void removeAircraft(String code);
+		public void removeAircraft(int code);
 		
 		public int getCapacityTotal();
 		

@@ -13,4 +13,5 @@
 *.settings
 
 #Maven
-target
+!target/gl-airline-1.0.jar
+target/*

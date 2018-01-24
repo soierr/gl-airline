@@ -4,7 +4,6 @@
 package gl.airline;
 
 import java.io.File;
-import java.io.FileReader;
 import java.util.SortedSet;
 import java.util.TreeSet;
 

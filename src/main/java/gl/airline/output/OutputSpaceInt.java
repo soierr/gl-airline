@@ -13,6 +13,10 @@ public interface OutputSpaceInt {
 	
 	public void printHelp();
 	
+	public void printSuccessOperation();
+	
+	public void printNotEnoughPars();
+	
 	public void printGoodbye();
 
 }

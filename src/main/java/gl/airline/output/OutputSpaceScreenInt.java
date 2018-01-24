@@ -20,6 +20,7 @@ public interface OutputSpaceScreenInt extends OutputSpaceInt{
 		FIND("find"),
 		ADD("add"),
 		REMOVE("remove"),
+		HELP("help"),
 		EXIT("exit");
 		
 		private final String str;
@@ -41,6 +42,5 @@ public interface OutputSpaceScreenInt extends OutputSpaceInt{
 	public void printList(SortedSet<Aircraft> sortedSetAircraft);
 	
 	public void printFind(SortedSet<Aircraft> sortedSetAircraft);
-	
 
 }
