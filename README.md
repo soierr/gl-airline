@@ -2,7 +2,7 @@
 
 Please make sure that the preliminary setup are done as following:
 
-1. OS console screen are no less than 115. Otherwise output might be wrapped
+1. OS console screen width is no less than 115. Otherwise output might be wrapped
 2. JAVA_HOME is set up to 1.8 jdk
 
 Steps to launch the application
