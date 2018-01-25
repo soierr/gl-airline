@@ -1,6 +1,6 @@
 # gl-airline
 
-Please make sure that the preliminary setup are done as following:
+Please make sure that the preliminary setup is done as following:
 
 1. OS console screen width is no less than 118. Otherwise output might be wrapped
 2. JAVA_HOME is set up to 1.8 jdk
