@@ -21,9 +21,15 @@ Example of unit test and simple test are available in proper test folder.
 
 ### Application tested on
 
-OS's: Windows 7 (64-bit), Ubuntu
+OS's: 
+Windows 7 (64-bit), 
 
-Target JDK: jdk1.8.0_161
+Ubuntu (64-bit)
+Description:      Ubuntu 16.04.3 LTS
+Release:	16.04
+Codename:	xenial
+
+Target JDK: jdk1.8.0_161 || jdk1.8.0_151
 
 Maven: apache-maven-3.3.9
 
