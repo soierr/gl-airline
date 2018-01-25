@@ -77,13 +77,13 @@ I added it to avoid extra jar creation and installation so that it would not con
 
 ### Application output example
 
-    ******************************************************************************************
+    ********************************************************************************************
     
-                                     MAU Airline Application
+                                      MAU Airline Application
     
-    This application is meant to help you with managing of the airplanes which company possess
+    This application is meant to help you with managing of the airplanes which company possesses
     
-    ******************************************************************************************
+    ********************************************************************************************
     
     list
     
