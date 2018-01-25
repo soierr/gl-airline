@@ -73,7 +73,7 @@ If it happens try to comment this plugin exclusion in pom.xml, i.e:
       </plugin>
 
 
-I added it to avoid extra jar creation and installation so that it would not confused which one to use as an application.
+I added it to avoid extra jar creation and installation so that it would not confuse which one to use as an application.
 
 ### Application output example
 
