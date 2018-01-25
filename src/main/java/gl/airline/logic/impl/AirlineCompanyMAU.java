@@ -21,6 +21,7 @@ import gl.airline.model.AircraftBusiness;
 import gl.airline.model.AircraftEconomy;
 import gl.airline.model.AircraftPremium;
 import gl.airline.model.AirlineCompany;
+import gl.airline.utils.UtilsCommon;
 
 /**
  * @author Sergey Slipchenko
@@ -188,7 +189,7 @@ public class AirlineCompanyMAU extends AirlineCompany{
     		
 				case CLASS_AIRPLANE_ECONOMY: {
 					
-					aircraft = new AircraftEconomy(getAircraftsSorted().size() + 1, 
+					aircraft = new AircraftEconomy(UtilsCommon.generateCode(), 
 							Integer.valueOf(params[0]), 
 							Integer.valueOf(params[1]), 
 							Integer.valueOf(params[2]), 
@@ -199,7 +200,7 @@ public class AirlineCompanyMAU extends AirlineCompany{
 					
 				}case CLASS_AIRPLANE_BUSINESS: {
 					
-					aircraft = new AircraftBusiness(getAircraftsSorted().size() + 1, 
+					aircraft = new AircraftBusiness(UtilsCommon.generateCode(), 
 							Integer.valueOf(params[0]), 
 							Integer.valueOf(params[1]), 
 							Integer.valueOf(params[2]), 
@@ -210,7 +211,7 @@ public class AirlineCompanyMAU extends AirlineCompany{
 					
 				}case CLASS_AIRPLANE_PREMIUM: {
 					
-					aircraft = new AircraftPremium(getAircraftsSorted().size() + 1, 
+					aircraft = new AircraftPremium(UtilsCommon.generateCode(), 
 							Integer.valueOf(params[0]), 
 							Integer.valueOf(params[1]), 
 							Integer.valueOf(params[2]), 
