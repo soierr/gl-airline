@@ -75,5 +75,30 @@ If it happens try to comment this plugin exclusion in pom.xml, i.e:
 
 I added it to avoid extra jar creation and installation so that it would not confused which one to use as an application.
 
+### Application output example
+
+    ******************************************************************************************
+    
+                                     MAU Airline Application
+    
+    This application is meant to help you with managing of the airplanes which company possess
+    
+    ******************************************************************************************
+    
+    list
+    
+    ------------------------------------------------------------------------------------------------------------------
+    
+    | Code  | Total capacity, kg | Carrying capacity, kg | Flight range, km | Fuel consumption, lph | Airplane Class |
+    
+    ------------------------------------------------------------------------------------------------------------------
+    |   1   |        1000        |          800          |       150        |          600          |    ECONOMY     |
+    |   2   |        1000        |          800          |       160        |          600          |    BUSINESS    |
+    |   3   |        1000        |          800          |       700        |          170          |    PREMIUM     |
+    |   4   |        1260        |         1120          |      106050      |          450          |    PREMIUM     |
+    ------------------------------------------------------------------------------------------------------------------
+
 In case of any extra issues, please write here blackfin@ukr.net or create an issue.  
 Any feedback is highly appreciated.
+
+
