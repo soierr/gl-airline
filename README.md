@@ -20,8 +20,10 @@ All the data are stored in txt file in JSON format. Filename is "gl-airline.txt"
 
 Application tested on:
 
-OS's: Windows 7 (64-bit), Ubuntu 
+OS's: Windows 7 (64-bit), Ubuntu
+
 Target JDK: jdk1.8.0_161
+
 Maven: apache-maven-3.3.9
 
 In case of any problem, please write here blackfin@ukr.net or create an issue.
