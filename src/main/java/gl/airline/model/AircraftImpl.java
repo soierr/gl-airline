@@ -9,6 +9,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * @author Sergey Slipchenko
  *
  */
+/*This is a class which implements all the common method for the airplane in company*/
+/*Then any different airplane can have their own features, thus we implement 3 level 
+ * hierarchy mentioned in the requirements. I.e Aircraft --> AircraftImpl --> Aircraft(Economy,Business,Premium, etc)*/
+
 public class AircraftImpl extends Aircraft implements Comparable<Object>{
 	
 	@JsonProperty
