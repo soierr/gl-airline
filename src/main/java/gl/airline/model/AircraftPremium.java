@@ -10,7 +10,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * @author Sergey Slipchenko
  *
  */
-public class AircraftPremium extends AircraftBusiness{
+public class AircraftPremium extends AircraftImpl{
+	
+		
+	@JsonProperty
+	private TYPE type;
 
 	@JsonCreator
 	public AircraftPremium(@JsonProperty("code") int code,
@@ -20,6 +24,14 @@ public class AircraftPremium extends AircraftBusiness{
 			   			   @JsonProperty("consumptionFuel") int consumptionFuel,
 			   			   @JsonProperty("type") TYPE type) {
 
-		super(code, capacityTotal, capacityCarrying, flightRange, consumptionFuel, type);
+		super(code, capacityTotal, capacityCarrying, flightRange, consumptionFuel);
+		
+		this.type = type;
+	}
+	
+	@Override
+	public TYPE getType(){
+		
+		return this.type;
 	}
 }

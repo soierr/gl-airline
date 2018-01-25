@@ -22,6 +22,7 @@ import gl.airline.model.AircraftPremium;
  */
 public class SortedSetSerTest {
 	
+	/*Just a simple test to check whether the model is serialized/deserialized ok*/
 	public static void main(String[] args) {
 		
 		try{
@@ -56,9 +57,6 @@ public class SortedSetSerTest {
 			
 			e.printStackTrace();
 		}
-			
-		
-		
 		
 	}
 
