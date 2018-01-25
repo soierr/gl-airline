@@ -21,7 +21,7 @@ Example of unit test and simple test are available in proper test folder.
 
 ### Application tested on
 
-OS's: 
+OS's:  
 Windows 7 (64-bit),   
 
 Ubuntu (64-bit)  
