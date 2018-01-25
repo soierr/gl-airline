@@ -87,7 +87,7 @@
 			</descriptors>
 			<archive>
 				<manifest>
-					<mainClass>gl.airline.init.App</mainClass>
+					<mainClass>gl.airline.main.App</mainClass>
 				</manifest>
 			</archive>
 		</configuration>

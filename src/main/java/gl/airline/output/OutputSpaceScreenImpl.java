@@ -17,7 +17,7 @@ public class OutputSpaceScreenImpl implements OutputSpaceScreenInt{
 	
 	private String companyName = null;
 	
-	private String lineHello = "******************************************************************************************";
+	private String lineHello = "********************************************************************************************";
 	private String lineTable = "------------------------------------------------------------------------------------------------------------------";
 	
 	private final String ERROR_NO_RECORDS_FOUND = "\nNo records found\n";
@@ -42,7 +42,7 @@ public class OutputSpaceScreenImpl implements OutputSpaceScreenInt{
 		System.out.print("\n");
 		System.out.printf("%s%n", StringUtils.center(getCompanyName() + " Airline Application", lineHello.length()));
 		System.out.print("\n");
-		System.out.printf("%s%n", StringUtils.center("This application is meant to help you with managing of the airplanes which company possess", lineHello.length()));
+		System.out.printf("%s%n", StringUtils.center("This application is meant to help you with managing of the airplanes which company possesses", lineHello.length()));
 		System.out.print("\n");
 		System.out.println(lineHello);
 		System.out.print("\n");
