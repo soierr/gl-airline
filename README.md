@@ -16,10 +16,10 @@ Steps to launch the application
 
 The gl-airline application is a simple demo-tool which allows users to view the list of airplanes, edit it and make some simple search.
 The list of available commands with description are availabe by "help" command, once the application is launched.
-All the data are stored in txt file in JSON format. Filename is "gl-airline.txt" you can find it next to your jar application
+All the data are stored in txt file in JSON format. Filename is "gl-airline.txt" you can find it next to your jar application.  
 Example of unit test and simple test are available in proper test folder.
 
-Application tested on:
+### Application tested on:
 
 OS's: Windows 7 (64-bit), Ubuntu
 
@@ -27,7 +27,7 @@ Target JDK: jdk1.8.0_161
 
 Maven: apache-maven-3.3.9
 
-Potential problems.
+### Potential problems
 
 Below are the maven test output:
 
