@@ -16,7 +16,7 @@ import gl.airline.model.Aircraft;
 import gl.airline.model.AircraftEconomy;
 
 /**
- * @author SOIERR
+ * @author Sergey Slipchenko
  *
  */
 public class CapacityCalculationJUnit {
