@@ -19,7 +19,7 @@ The list of available commands with description are availabe by "help" command, 
 All the data are stored in txt file in JSON format. Filename is "gl-airline.txt" you can find it next to your jar application.  
 Example of unit test and simple test are available in proper test folder.
 
-### Application tested on:
+### Application tested on
 
 OS's: Windows 7 (64-bit), Ubuntu
 
@@ -43,7 +43,7 @@ Below are the maven test output:
 [WARNING]  
 
 so there is concern that it might be a problem with project building using a newer version maven.
-If it happens try to comment this plugin exclusion in pom.xml, i.e:
+If it happens try to comment this plugin exclusions in pom.xml, i.e:
 
       <plugin>
         <artifactId>maven-jar-plugin</artifactId>
@@ -73,7 +73,7 @@ If it happens try to comment this plugin exclusion in pom.xml, i.e:
       </plugin>
 
 
-I added it to avoid extra jar creation and installation so that it would not confuse which one to use as an application.
+I added it to avoid an extra jar creation and installation so that it would not confuse which one to use as an application.
 
 ### Application output example
 
