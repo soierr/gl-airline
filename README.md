@@ -22,12 +22,12 @@ Example of unit test and simple test are available in proper test folder.
 ### Application tested on
 
 OS's: 
-Windows 7 (64-bit), 
+Windows 7 (64-bit),   
 
-Ubuntu (64-bit)
-Description:      Ubuntu 16.04.3 LTS
-Release:	16.04
-Codename:	xenial
+Ubuntu (64-bit)  
+Description:      Ubuntu 16.04.3 LTS  
+Release:	16.04  
+Codename:	xenial  
 
 Target JDK: jdk1.8.0_161 || jdk1.8.0_151
 
