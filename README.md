@@ -35,7 +35,7 @@ Maven: apache-maven-3.3.9
 
 ### Potential problems
 
-Below is the the maven test output snippet:
+Below is the the mvn test output snippet:
 
 [INFO] Scanning for projects...  
 [WARNING]  
