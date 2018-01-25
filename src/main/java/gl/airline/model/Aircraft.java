@@ -95,9 +95,6 @@ public abstract class Aircraft implements Comparable<Object>{
 		return type;
 	}
 	
-	/* (non-Javadoc)
-	 * @see java.lang.Comparable#compareTo(java.lang.Object)
-	 */
 	@Override
 	public int compareTo(Object o) {
 		
@@ -119,10 +116,7 @@ public abstract class Aircraft implements Comparable<Object>{
 		
 		
 	}
-	
-	/* (non-Javadoc)
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
+
 	@Override
 	public boolean equals(Object o) {
 		
@@ -139,10 +133,7 @@ public abstract class Aircraft implements Comparable<Object>{
 		
 		return this.code == aircraft.getCode();
 	}
-	
-	/* (non-Javadoc)
-	 * @see java.lang.Object#hashCode()
-	 */
+
 	@Override
 	public int hashCode() {
 

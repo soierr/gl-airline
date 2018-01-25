@@ -22,8 +22,4 @@ public class AircraftPremium extends AircraftBusiness{
 
 		super(code, capacityTotal, capacityCarrying, flightRange, consumptionFuel, type);
 	}
-	
-	/* (non-Javadoc)
-	 * @see gl.airline.model.AircraftBusiness#getType()
-	 */
 }

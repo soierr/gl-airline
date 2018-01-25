@@ -60,16 +60,17 @@ public class OutputSpaceScreenImpl implements OutputSpaceScreenInt{
 		
 		System.out.printf("%-8s%s%n", OutputSpaceScreenInt.COMMAND.FIND.toString(), 
 				" - lists found airplanes corresponded to a given range of fuel consumption parameters");
-		System.out.printf("%-11s%s%n", " ", "Usage format: find $minCosumption $maxConsumption");		
+		System.out.printf("%-11s%s%n", " ", "Usage format: find $minConsumption $maxConsumption");		
 		System.out.printf("%-11s%s%n", " ", "All parameters are mandatory and integers");
 		
 		System.out.printf("%-8s%s%n", OutputSpaceScreenInt.COMMAND.ADD.toString(), 
-				" - adds an airplane to airline company");
-		System.out.printf("%-11s%s%n", " ", "Usage format: add $totalCapacity $carryingCapacity $flightRange $fueldConsumption");
+				" - adds an airplane to the airline company");
+		System.out.printf("%-11s%s%n", " ", "Usage format: add $totalCapacity $carryingCapacity $flightRange $fueldConsumption $airplaneClass");
 		System.out.printf("%-11s%s%n", " ", "All parameters are mandatory and integers");
+		System.out.printf("%-11s%s%n", " ", "Airplane classes available: 1 2 3 i.e (ECONOMY BUSINESS PREMIUM)");
 		
 		System.out.printf("%-8s%s%n", OutputSpaceScreenInt.COMMAND.REMOVE.toString(), 
-				" - removes an airplane to airline company");
+				" - removes an airplane from the airline company");
 		System.out.printf("%-11s%s%n", " ", "Usage format: remove $code");
 		System.out.printf("%-11s%s%n", " ", "All parameters are mandatory and integers");
 		

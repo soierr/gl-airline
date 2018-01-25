@@ -11,10 +11,6 @@ import java.util.SortedSet;
  */
 public abstract class AirlineCompany{
 	
-	/*we want to know that all the preparations 
-	 * are successfully done: file opened or db connected, etc*/
-	//public abstract void init() throws Exception;
-	
 	public abstract Manager getManager();
 	
 	public abstract String getName();
