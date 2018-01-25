@@ -111,7 +111,7 @@ public class AirlineCompanyMAU extends AirlineCompany{
 
 	@Override
 	public void shutdown() {
-		
+
 	}
 	
 	private void storeData() throws JsonMappingException, JsonGenerationException, IOException{
