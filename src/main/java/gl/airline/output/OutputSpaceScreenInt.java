@@ -11,6 +11,8 @@ import gl.airline.model.Aircraft;
  * @author Sergey Slipchenko
  *
  */
+/*Interface for a proper airline and output. 
+ * Potentiall there are may be more than one airline with different set of logics*/
 public interface OutputSpaceScreenInt extends OutputSpaceInt{
 	
 	public static enum COMMAND{

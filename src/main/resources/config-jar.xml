@@ -9,48 +9,8 @@
   <dependencySets>
     <dependencySet>
       <unpack>true</unpack>
-<!--       <unpackOptions>
-        <excludes>
-          <exclude>META-INF/config.xml</exclude>
-          <exclude>META-INF/config.xsd</exclude>
-          <exclude>META-INF/log4j-local.xml</exclude>
-          <exclude>META-INF/log4j-prod.xml</exclude>
-          <exclude>META-INF/hazelcast-client-local.xml</exclude>
-          <exclude>META-INF/hazelcast-client-prod.xml</exclude>
-        </excludes>
-      </unpackOptions> -->
     </dependencySet>
   </dependencySets>
   <files>
-<!--     <file>
-      <source>src/main/resources/config.xml</source>
-      <outputDirectory>/META-INF</outputDirectory>
-      <filtered>false</filtered>
-    </file>
-    <file>
-      <source>src/main/resources/config.xsd</source>
-      <outputDirectory>/META-INF</outputDirectory>
-      <filtered>false</filtered>
-    </file>
-    <file>
-      <source>src/main/resources/log4j2-local.xml</source>
-      <outputDirectory>/META-INF</outputDirectory>
-      <filtered>false</filtered>
-    </file>
-    <file>
-      <source>src/main/resources/log4j2-prod.xml</source>
-      <outputDirectory>/META-INF</outputDirectory>
-      <filtered>false</filtered>
-    </file>
-	<file>
-      <source>src/main/resources/hazelcast-client-local.xml</source>
-      <outputDirectory>/META-INF</outputDirectory>
-      <filtered>false</filtered>
-    </file>
-	<file>
-      <source>src/main/resources/hazelcast-client-prod.xml</source>
-      <outputDirectory>/META-INF</outputDirectory>
-      <filtered>false</filtered>
-    </file> -->
   </files>
 </assembly>

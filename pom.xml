@@ -4,8 +4,6 @@
   <groupId>gl.airline</groupId>
   <artifactId>gl-airline</artifactId>  
   <version>1.0</version>
-<!--   <packaging>jar</packaging>
-  <name>gl-airline</name> -->
   <url>http://maven.apache.org</url>
   <properties>  
    <maven.compiler.source>1.8</maven.compiler.source>
@@ -15,7 +13,7 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
+      <version>4.10</version>
       <scope>test</scope>
     </dependency>
 	<dependency>

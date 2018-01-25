@@ -1,4 +1,4 @@
-package gl.airline.init;
+package gl.airline.main;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

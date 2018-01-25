@@ -20,7 +20,7 @@ import gl.airline.model.AircraftPremium;
  * @author Sergey Slipchenko
  *
  */
-public class SortedSetSerTest {
+public class SortedSetSerializationDeser {
 	
 	/*Just a simple test to check whether the model is serialized/deserialized ok*/
 	public static void main(String[] args) {
@@ -51,7 +51,6 @@ public class SortedSetSerTest {
 			AirlineCompanyMAU airlineCompanyMAU2 = (AirlineCompanyMAU) or.readValue(resultFile);
 			
 			System.out.println(airlineCompanyMAU2.getName());
-			
 			
 		}catch(Exception e){
 			
