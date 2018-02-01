@@ -74,14 +74,7 @@ public class AircraftImpl extends Aircraft implements Comparable<Object>{
 	
 	public TYPE getType(){
 		
-		try{
-			throw new NoSuchMethodException("Need to override it");
-		}catch(NoSuchMethodException nsme){
-			
-			nsme.printStackTrace();
-		}
-		
-		return null;
+		throw new UnsupportedOperationException("Method needs to be overriden");
 	}
 	
 	@Override
